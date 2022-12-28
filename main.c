@@ -1,11 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void main(){
-    // 2a
-    // printf("Hej jag heter Stefan\n");
-    // printf("Testgatan 12\n");
-    // printf("111 55  Teststad\n");
-    //2b
-    printf("Hej jag heter Stefan\nTestgatan 12\n111 55  Teststad\n");
-
+    printf("Name of user:%s so now you know\n", getenv("USERNAME") );
+    printf("Pathen %s\n", getenv("PATH") );
 }
