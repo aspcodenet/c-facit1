@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 void main(){
-    int tal;
-    printf("Ange ett tal:");
-    scanf(" %d", &tal);
+    int antal;
+    printf("Ange hur många liter mjölk som finns kvar:");
+    scanf(" %d", &antal);
 
-    if(tal>10)
-        printf("Talet är större än 10\n");
-//    if(tal<10)
-  //      printf("Talet är mindre än 10\n");
-    else if(tal<10)
-         printf("Talet är mindre än 10\n");
-    
+    if(antal < 10)
+        printf("Beställ 30 paket. \n");
+    else if(antal > 10 && antal < 20)
+        printf("Beställ 20 paket. \n");
+    else
+        printf("Du behöver inte beställa någon mjölk.\n");
 }
