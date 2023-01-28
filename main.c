@@ -1,11 +1,15 @@
 #include <stdio.h>
 
 void main(){
-    // 2a
-    // printf("Hej jag heter Stefan\n");
-    // printf("Testgatan 12\n");
-    // printf("111 55  Teststad\n");
-    //2b
-    printf("Hej jag heter Stefan\nTestgatan 12\n111 55  Teststad\n");
+    int tal;
+    printf("Ange ett tal:");
+    scanf(" %d", &tal);
 
+    if(tal>10)
+        printf("Talet är större än 10\n");
+//    if(tal<10)
+  //      printf("Talet är mindre än 10\n");
+    else if(tal<10)
+         printf("Talet är mindre än 10\n");
+    
 }
