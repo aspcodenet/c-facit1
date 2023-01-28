@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 void main(){
-    int category;
-    printf("1.vuxen\n2.pensionär\n3.student\n");
-    printf("Ange din kategori:");
-    scanf(" %d", &category);
+    int country;
+    printf("1 Sverige\n, 2 Danmark\n, 3 Norge\n, 4 Finland\n, 5 Island\n, 0 Resten\n");
+    printf("Ange ditt land:");
+    scanf(" %d", &country);
 
-    int cost;
-    if (category == 2 || category == 3)
-        cost = 20;
-    else if(category == 1)
-        cost = 30;
-    printf("Resan kostar %d kr.\n",cost);
+    if(country <= 0 || country >= 6)
+        printf("Felaktig inmatning.\n");
+    else if (country == 1 || country == 2 || country == 3)
+        printf("Du bor i Skandinavien.\n");
+    else 
+        printf("inte bor i Skandinavien.\n");
 }
