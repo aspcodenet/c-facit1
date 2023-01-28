@@ -1,23 +1,16 @@
 #include <stdio.h>
 
 void main(){
-    float temperatur;
-    printf("Ange din temperatur:");
-    scanf(" %f", &temperatur);
-    printf("%f\n", temperatur);
+    int age;
+    printf("Ange din ålder:");
+    scanf(" %d", &age);
 
-    if(temperatur > 39.5)
-        printf("Du bör uppsöka läkare. \n");
-    else if(temperatur > 37.8)
-        printf("Du har feber. \n");
-    else if(temperatur < 37.8)
-        printf("Du har inte feber.\n");
+    if(age < 18)
+        printf("Ej myndig. \n");
+    else if(age > 65)
+        printf("Pensionär. \n");
+    else 
+        printf("Myndig men ej pensionär.\n");
 
 
-    if(temperatur > 37.8 && temperatur <= 39.5)
-        printf("Du har feber. \n");
-    else if(temperatur > 39.5)
-        printf("Du bör uppsöka läkare. \n");
-    else if(temperatur < 37.8)
-        printf("Du har inte feber.\n");
 }
