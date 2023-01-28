@@ -1,14 +1,23 @@
 #include <stdio.h>
 
 void main(){
-    int antal;
-    printf("Ange hur många liter mjölk som finns kvar:");
-    scanf(" %d", &antal);
+    float temperatur;
+    printf("Ange din temperatur:");
+    scanf(" %f", &temperatur);
+    printf("%f\n", temperatur);
 
-    if(antal < 10)
-        printf("Beställ 30 paket. \n");
-    else if(antal > 10 && antal < 20)
-        printf("Beställ 20 paket. \n");
-    else
-        printf("Du behöver inte beställa någon mjölk.\n");
+    if(temperatur > 39.5)
+        printf("Du bör uppsöka läkare. \n");
+    else if(temperatur > 37.8)
+        printf("Du har feber. \n");
+    else if(temperatur < 37.8)
+        printf("Du har inte feber.\n");
+
+
+    if(temperatur > 37.8 && temperatur <= 39.5)
+        printf("Du har feber. \n");
+    else if(temperatur > 39.5)
+        printf("Du bör uppsöka läkare. \n");
+    else if(temperatur < 37.8)
+        printf("Du har inte feber.\n");
 }
