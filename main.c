@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 void main(){
-    int age;
-    printf("Ange din ålder:");
-    scanf(" %d", &age);
+    int category;
+    printf("1.vuxen\n2.pensionär\n3.student\n");
+    printf("Ange din kategori:");
+    scanf(" %d", &category);
 
-    if(age < 18)
-        printf("Ej myndig. \n");
-    else if(age > 65)
-        printf("Pensionär. \n");
-    else 
-        printf("Myndig men ej pensionär.\n");
-
-
+    int cost;
+    if (category == 2 || category == 3)
+        cost = 20;
+    else if(category == 1)
+        cost = 30;
+    printf("Resan kostar %d kr.\n",cost);
 }
