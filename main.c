@@ -1,15 +1,56 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 void main(){
-    int country;
-    printf("1 Sverige\n, 2 Danmark\n, 3 Norge\n, 4 Finland\n, 5 Island\n, 0 Resten\n");
-    printf("Ange ditt land:");
-    scanf(" %d", &country);
+    int money;
+    printf("Ange hur många kronor du har:");
+    scanf(" %d", &money);
+    
+    bool hasRabatt;
+    int rabattNum;
+    printf("Har du rabatt? 1 = ja:");
+    scanf(" %d", &rabattNum);
+    hasRabatt = rabattNum == 1;
+    // if(rabattNum == 1)
+    //     hasRabatt = true;
+    // else
+    //     hasRabatt = false;
 
-    if(country <= 0 || country >= 6)
-        printf("Felaktig inmatning.\n");
-    else if (country == 1 || country == 2 || country == 3)
-        printf("Du bor i Skandinavien.\n");
-    else 
-        printf("inte bor i Skandinavien.\n");
+    // if(money >= 15 && money <= 25 && hasRabatt == false)
+    //     printf("Du kan köpa en liten hamburgare.\n");
+    // else if(money >= 15 && money <= 25 && hasRabatt == true)
+    //     printf("Du kan köpa en liten hamburgare och en pommes frites.\n");
+    //  else if(money > 25 && money <= 50 && hasRabatt == false)
+    //     printf("Du kan köpa en stor hamburgare.\n");
+    //  else if(money > 25 && money <= 50 && hasRabatt == true)
+    //     printf("Du kan köpa en stor hamburgare och pommes frites.\n");
+    //  else if(money > 60 ||  ( money >=50 && money <=60 && hasRabatt == true  ))
+    //     printf("Du kan köpa ett meal med dryck.\n");
+
+
+    // if(money >= 15 && money <= 25 && !hasRabatt)
+    //     printf("Du kan köpa en liten hamburgare.\n");
+    // else if(money >= 15 && money <= 25 && hasRabatt)
+    //     printf("Du kan köpa en liten hamburgare och en pommes frites.\n");
+    //  else if(money > 25 && money <= 50 && !hasRabatt)
+    //     printf("Du kan köpa en stor hamburgare.\n");
+    //  else if(money > 25 && money <= 50 && hasRabatt)
+    //     printf("Du kan köpa en stor hamburgare och pommes frites.\n");
+    //  else if(money > 60 ||  ( money >=50 && money <=60 && hasRabatt  ))
+    //     printf("Du kan köpa ett meal med dryck.\n");
+
+    if(money >= 15 && money <= 25){
+        if(hasRabatt)
+            printf("Du kan köpa en liten hamburgare och en pommes frites.\n");
+        else
+            printf("Du kan köpa en liten hamburgare.\n");
+    }
+    else if(money >= 25 && money <= 50){
+        if(hasRabatt)
+            printf("Du kan köpa en stor hamburgare och pommes frites.\n");
+        else
+            printf("Du kan köpa en stor hamburgare.\n");
+    }
+    else if(money > 60 || ( money >=50 && money <=60 && hasRabatt  ) )
+        printf("Du kan köpa ett meal med dryck.\n");
 }
