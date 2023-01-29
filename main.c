@@ -3,54 +3,38 @@
 
 void main(){
     int money;
-    printf("Ange hur många kronor du har:");
+    printf("Ange belopp:");
     scanf(" %d", &money);
+
+
+        // 1800 / 500  -> 3
     
-    bool hasRabatt;
-    int rabattNum;
-    printf("Har du rabatt? 1 = ja:");
-    scanf(" %d", &rabattNum);
-    hasRabatt = rabattNum == 1;
-    // if(rabattNum == 1)
-    //     hasRabatt = true;
-    // else
-    //     hasRabatt = false;
+    int fiveHundreds = money / 500; 
+    money = money % 500; //remainder operator - rest - hur mycket till måste jag betala
 
-    // if(money >= 15 && money <= 25 && hasRabatt == false)
-    //     printf("Du kan köpa en liten hamburgare.\n");
-    // else if(money >= 15 && money <= 25 && hasRabatt == true)
-    //     printf("Du kan köpa en liten hamburgare och en pommes frites.\n");
-    //  else if(money > 25 && money <= 50 && hasRabatt == false)
-    //     printf("Du kan köpa en stor hamburgare.\n");
-    //  else if(money > 25 && money <= 50 && hasRabatt == true)
-    //     printf("Du kan köpa en stor hamburgare och pommes frites.\n");
-    //  else if(money > 60 ||  ( money >=50 && money <=60 && hasRabatt == true  ))
-    //     printf("Du kan köpa ett meal med dryck.\n");
+    int twoHundreds = money / 200; 
+    money = money % 200;
 
+    int hundreds = money / 100; 
+    money = money % 100;
 
-    // if(money >= 15 && money <= 25 && !hasRabatt)
-    //     printf("Du kan köpa en liten hamburgare.\n");
-    // else if(money >= 15 && money <= 25 && hasRabatt)
-    //     printf("Du kan köpa en liten hamburgare och en pommes frites.\n");
-    //  else if(money > 25 && money <= 50 && !hasRabatt)
-    //     printf("Du kan köpa en stor hamburgare.\n");
-    //  else if(money > 25 && money <= 50 && hasRabatt)
-    //     printf("Du kan köpa en stor hamburgare och pommes frites.\n");
-    //  else if(money > 60 ||  ( money >=50 && money <=60 && hasRabatt  ))
-    //     printf("Du kan köpa ett meal med dryck.\n");
+    int fiftees = money / 50; 
+    money = money % 50;
 
-    if(money >= 15 && money <= 25){
-        if(hasRabatt)
-            printf("Du kan köpa en liten hamburgare och en pommes frites.\n");
-        else
-            printf("Du kan köpa en liten hamburgare.\n");
-    }
-    else if(money >= 25 && money <= 50){
-        if(hasRabatt)
-            printf("Du kan köpa en stor hamburgare och pommes frites.\n");
-        else
-            printf("Du kan köpa en stor hamburgare.\n");
-    }
-    else if(money > 60 || ( money >=50 && money <=60 && hasRabatt  ) )
-        printf("Du kan köpa ett meal med dryck.\n");
+    int twenties = money / 20; 
+    money = money % 20;
+
+    int tens = money / 10; 
+    money = money % 10;
+
+    int kronor = money; 
+
+    printf("500:%d\n", fiveHundreds);
+    printf("200:%d\n", twoHundreds);
+    printf("100:%d\n", hundreds);
+    printf("50:%d\n", fiftees);
+    printf("20:%d\n", twenties);
+    printf("10:%d\n", tens);
+    printf("1:%d\n", kronor);
+
 }
